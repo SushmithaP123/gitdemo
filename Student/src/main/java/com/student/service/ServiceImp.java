@@ -31,4 +31,27 @@ private static final Logger log = LoggerFactory.getLogger(ServiceImp.class);
 		return allstudents;
 	}
 
-}
+	@Override
+	public Student getByStudentname(String name) {
+		Student getStudent = null; 
+		getStudent =studentRepository.findByStudentName(name);
+		
+		return getStudent;
+	}
+
+	@Override
+	public void deleteStudent(String name) {
+		// TODO Auto-generated method stub
+		studentRepository.deleteById(name);
+	}
+	@Override
+	public Student updateStudent(Student student) {
+			Student s = new Student();
+			s.setStudentName(student.getStudentName());
+			s.setAge(student.getAge());
+			s.setSalary(student.getSalary());
+			studentRepository.save(student);
+			return s;
+		}
+	}
+  

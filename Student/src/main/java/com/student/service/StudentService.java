@@ -13,6 +13,12 @@ public interface StudentService {
 	public Student addstudent(Student student);
 
 	public List<Student> allstudent();
+
+	public Student getByStudentname(String name);
+
+	public void deleteStudent(String name);
+
+	public Student updateStudent(Student student);
 	
 
 	
