@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Collation("student")
 public class Student {
-
+@Id
 private String studentName;
 private double salary;
 private int age;
